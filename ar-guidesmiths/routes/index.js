@@ -10,10 +10,6 @@ router.get('/login', function(req, res, next) {
 
 router.get('/grattitud', function(req, res, next) {
   const { email } = req.query;
-  console.log({
-    '_id.email': email,
-    '_id.orgId': 'T2G4ZDZTK',
-  });
   karma.findOne({
     '_id.email': email,
     '_id.orgId': 'T2G4ZDZTK',
