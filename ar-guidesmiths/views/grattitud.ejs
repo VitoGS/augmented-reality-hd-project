@@ -6,12 +6,15 @@
   <a-scene embeded arjs="trackingMethod: best">
     <a-anchor hit-testing-enabled="true">
       <a-entity id="mario" piramid></a-entity>
-      <a-plane width="5" height="5" rotation="-100 0 0" position="0 -3 -2" color="purple"></a-plane>
-      <a-text width="4" height="4" position="0 -2 -2" value="Huli" rotation="-100 0 0" color="white"></a-text>
+      <a-plane width="5" height="5" rotation="-100 0 0" position="0 -3 -2" color="<%= color %>"></a-plane>
+      <a-text width="4" height="4" position="0 -2 -2" value="Name: <%= name %>" rotation="-100 0 0" color="white"></a-text>
+      <a-text width="4" height="4" position="0 -2 -3" value="Karma: <%= karma %>" rotation="-100 0 0" color="white"></a-text>
+      <a-text width="4" height="4" position="0 -2 -2.3" value="Email: <%= email %>" rotation="-100 0 0" color="white"></a-text>
     </a-anchor>
     <a-camera-static />
   </a-scene>
   <div class="tabs">
-      <p class="tab"><a href="<%= link %>">Bamboo</a></p>
+      <p class="tab"><a href="grattitud">Grattitud</a></p>
+      <p class="tab"><a href="bamboo">Bamboo</a></p>
   </div>
 </html>
