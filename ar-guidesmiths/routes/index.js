@@ -7,7 +7,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/ar', function(req, res, next) {
-  res.render('ar');
+  res.render('ar', {
+    name: 'Ismael',
+    karma: 23423,
+    email: 'ismael.bakkali@guidesmiths.com',
+    color: '#3bba90'
+  });
 });
 
 router.get('/login', function(req, res, next) {
