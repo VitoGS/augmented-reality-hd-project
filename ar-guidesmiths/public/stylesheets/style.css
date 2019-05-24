@@ -15,7 +15,7 @@ a,
 a:link,
 a:visited,
 a:active {
-  color: #3ca9e2;
+  color: #3bba90;
   transition: all 0.2s ease;
   &:focus,
   &:hover {
@@ -58,7 +58,7 @@ input[type='email'] {
   display: inline-block;
   background: none;
   &:focus {
-    border-color: #3ca9e2;
+    border-color: #3bba90;
     &:invalid {
       color: #cc1e2b;
       border-color: #cc1e2b;
@@ -101,7 +101,7 @@ input[type='email'] {
 input[type='submit'] {
   border: none;
   display: block;
-  background-color: #3ca9e2;
+  background-color: #3bba90;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
