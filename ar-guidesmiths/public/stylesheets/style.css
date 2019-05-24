@@ -125,3 +125,14 @@ input[type='submit'] {
   padding: 10px 0;
   border-radius: 0 0 4px 4px;
 }
+
+.tabs {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background: #fff;
+}
+
+.tab {
+  margin-left: 50px;
+}

@@ -19,4 +19,16 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
+router.get('/grattitud', function(req, res, next) {
+  res.render('grattitud', {
+    link: 'http://localhost:3000/bamboo'
+  });
+});
+
+router.get('/bamboo', function(req, res, next) {
+  res.render('bamboo', {
+    link: 'http://localhost:3000/grattitud'
+  });
+});
+
 module.exports = router;
