@@ -10,6 +10,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+ const mongoose = require('mongoose');
+
+const MONGODB_URI = process.env.MONGODB_URI || `mongodb://dev-write-read:J9gEBY4Bkq288ju@ds139841.mlab.com:39841/kaas-dev`;
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true })
+    .then(() => console.info(`Connected to the database: ${MONGODB_URI}`))
+    .catch(error => console.error(`Database connection error (${MONGODB_URI}):`, error)); 
+
 app.use(express.static(__dirname + '/public'));
 
 // view engine setup
@@ -28,14 +36,8 @@ app.use(session({
 }))
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
-app.use('*', function(req, res, next) {
-  const { email } = req.session;
-  if (!email) {
-    return res.redirect('/login');
-  }
-  return res.redirect('/bamboo');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
