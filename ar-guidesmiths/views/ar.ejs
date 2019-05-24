@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
+  <a-scene embeded arjs="trackingMethod: best">
+    <a-anchor hit-testing-enabled="true">
+      <a-entity id="mario" piramid></a-entity>
+      <a-plane width="3.5" height="3.5" rotation="-100 0 0" position="0 -3 -2" color="purple"></a-plane>
+      <a-text width="5" height="5" position="0 -2 -2" value="Kevin JMESC" rotation="-100 0 0" color="white"></a-text>
+    </a-anchor>
+    <a-camera-static />
+  </a-scene>
+</html>
