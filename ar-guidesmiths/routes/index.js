@@ -14,9 +14,11 @@ router.get('/grattitud', function(req, res, next) {
     '_id.email': email,
     '_id.orgId': 'T2G4ZDZTK',
   }, (err, dataKarma) => {
+    if(err || dataKarma == null) return res.redirect('/login')
     const karma = JSON.parse(JSON.stringify(dataKarma));
     const { score } = karma;
     users.findOne({ 'user.username': email, 'organization.id': 'T2G4ZDZTK' }, (err, data) => {
+      if(err || data == null) return res.redirect('/login')
       const info = JSON.parse(JSON.stringify(data));
       const { user, payload } = info;
       const name = payload.real_name;
@@ -24,7 +26,7 @@ router.get('/grattitud', function(req, res, next) {
         name,
         karma: score,
         email,
-        color: '#3bba90'
+        color: '#363543'
       });
     });
   })

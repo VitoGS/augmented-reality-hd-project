@@ -4,10 +4,11 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
   <a-scene embeded arjs="trackingMethod: best">
     <a-anchor hit-testing-enabled="true">
-      <a-plane width="3" height="5" rotation="-90 -90 0" position="0 -3 -2" color="<%= color %>"></a-plane>
-      <a-text width="4" height="4" position="-2 -3 -2" value="Name: <%= name %>" rotation="-100 0 0" color="white"></a-text>
-      <a-text width="4" height="4" position="-2 -3 -3" value="Karma: <%= karma %>" rotation="-100 0 0" color="white"></a-text>
-      <a-text width="4" height="4" position="-2 -3 -2.3" value="Email: <%= email %>" rotation="-100 0 0" color="white"></a-text>
+      <a-plane width="3" height="2.5" rotation="-90 0 0" position="0 0 -2" color="white"></a-plane>
+    <a-image width="1.6" height="0.8" rotation="-90 0 0" position="0 0.2 -2.70"  src="/guidesmiths_logo.png"></a-image> 
+      <a-text width="3" height="3" position="-1.2 0.2 -2" value="Name: <%= name %>" rotation="-90 0 0" color="#363543"></a-text>
+  <a-text width="3" height="3" position="-1.2 0.2 -1.8" value="Karma: <%= karma %>" rotation="-90 0 0" color="#363543"></a-text>
+  <a-text width="3" height="3" position="-1.2 0.2 -1.6" value="Email: <%= email %>" rotation="-90 0 0" color="#363543"></a-text> 
     </a-anchor>
     <a-camera-static />
   </a-scene>
